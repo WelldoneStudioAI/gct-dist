@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>GCT</title>
+        <item>
+            <title>1.0</title>
+            <pubDate>Thu, 13 Aug 2026 12:09:35 -0400</pubDate>
+            <link>https://github.com/WelldoneStudioAI/gct-dist</link>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/WelldoneStudioAI/gct-dist/releases/download/mac-v1.0b1/GCT.dmg" length="4808010" type="application/octet-stream" sparkle:edSignature="wo3kZErXuk26uesEKF8hPF6ACfio4BxFgHKuxLEN+A9248vItwGcwR9G6C8ER31bjslByBZocnXXJ8S/QyeiAA=="/>
+        </item>
+    </channel>
+</rss>
