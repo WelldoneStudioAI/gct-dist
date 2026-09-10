@@ -4,12 +4,12 @@
         <title>GCT</title>
         <item>
             <title>1.0</title>
-            <pubDate>Wed, 09 Sep 2026 21:10:00 -0400</pubDate>
+            <pubDate>Wed, 09 Sep 2026 21:25:12 -0400</pubDate>
             <link>https://github.com/WelldoneStudioAI/gct-dist</link>
-            <sparkle:version>59</sparkle:version>
+            <sparkle:version>60</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/WelldoneStudioAI/gct-dist/releases/download/mac-v1.0b59/GCT.dmg" length="7797776" type="application/octet-stream" sparkle:edSignature="+6ewcguNFG4hc33vgECzd51Y+vNA/QOYyLWGF+0F9GEXG2UctnfpanhCxifzzC668Q5C4yAUF28+SevuasFVBA=="/>
+            <enclosure url="https://github.com/WelldoneStudioAI/gct-dist/releases/download/mac-v1.0b60/GCT.dmg" length="7797874" type="application/octet-stream" sparkle:edSignature="4UCWyBUGMyLotd5OMyw+fyKlILTfpHG4kEQ4b0L2GfFsqm7UAz5+3RK0b7OPTIs9Epmr5FagTGnoi62fuszkBQ=="/>
         </item>
     </channel>
 </rss>
