@@ -1,0 +1,31 @@
+# Surveillance du serveur GCT (JP 08/10 : « installe une alerte qui me prévient si le serveur tombe »).
+# Le serveur tourne sur le MacBook de JP : une alerte sur ce même Mac tomberait avec lui.
+# Ici, GitHub vérifie de l'extérieur, toutes les 15 minutes ; 3 essais sur ~2 minutes.
+# Échec = GitHub envoie un courriel au compte (Réglages GitHub › Notifications › Actions).
+name: Sante du serveur GCT
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Adresse à vérifier (par défaut : la santé du serveur)"
+        required: false
+        default: "https://app.groupeconseiltanguay.com/api/health"
+jobs:
+  sante:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Le serveur GCT répond-il ?
+        env:
+          URL: ${{ github.event.inputs.url || 'https://app.groupeconseiltanguay.com/api/health' }}
+        run: |
+          for essai in 1 2 3; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$URL" || echo 000)
+            echo "Essai $essai : HTTP $code"
+            if [ "$code" = "200" ]; then echo "Serveur GCT en ligne."; exit 0; fi
+            [ "$essai" -lt 3 ] && sleep 50
+          done
+          echo "::error::Le serveur GCT ne répond plus ($URL) — le MacBook de JP est-il éteint, en veille ou hors ligne ? L'app de LPT et le portail des clients sont coupés."
+          exit 1
